@@ -33,8 +33,9 @@ class Home extends Component{
         return(
             <>
                 <div className="jumbotron">
+                    {this.state.Disp&&<Link to="/"><i class="fa fa-angle-double-left fa-lg" style={{color: "#010067"}} aria-hidden="true"></i></Link>}
                     <div className="row justify-content-center">
-                        <Link to="/"><h1 style={{fontSize: "4rem"}}><strong>ReZinga</strong></h1></Link>
+                        <Link to="/"><h1 style={{fontSize: "4rem", color: "#010067"}}><strong>ReZinga</strong></h1></Link>
                     </div>
                     <div className="row justify-content-center mt-4 col-12" style={{padding: "2rem"}}>
                         <LocalForm onSubmit={(values)=>this.handleSubmit(values)}>
@@ -52,7 +53,7 @@ class Home extends Component{
                                     <Control.text model=".cusine" id="cusine" name="cusine" placeholder="Restaurant or Cuisine" className="form-control" />
                                 </Col>
                                 <Col className="col-2 ml-auto">
-                                    <Button type="submit" color="primary">Search</Button>
+                                    <Button color="primary" style={{backgroundColor:"#010067"}} type="submit">Search</Button>
                                 </Col>
                             </Row>
                         </LocalForm>
