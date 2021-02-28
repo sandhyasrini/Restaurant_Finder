@@ -1,38 +1,40 @@
-.App {
-  text-align: center;
+.jumbotron{
+  background-image: url(./public/bck_img9\ .1.jfif);
+  height: 55vh;
+  background-size: cover;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.detailCard{
+  padding: 10px 10px 20px 10px;
+  border: 0 solid #BFBFBF;
+  background-color: white;
+  box-shadow: 0.5rem 0.5rem 1rem #BFBFBF;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.resDetail{
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+a:link,:visited,:active,:hover {
+  color: black;
+  text-decoration: none;
+}
+
+.detailCard:hover{
+  transform: scale(1.1);
+}
+
+.load {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  position: fixed;
+  top:40%;
+  left: -2.5%;
+  color:#000000;
 }
 
-.App-link {
-  color: #61dafb;
+Card{
+  border-radius: 25px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
