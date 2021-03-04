@@ -23,7 +23,7 @@ a:link,:visited,:active,:hover {
 }
 
 .detailCard:hover{
-  transform: scale(1.1);
+  transform: scale(1.09);
 }
 
 .load {
@@ -33,6 +33,14 @@ a:link,:visited,:active,:hover {
   top:40%;
   left: -2.5%;
   color:#000000;
+}
+
+.loadInfinite{
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  top:90%;
+  left: 50%;
 }
 
 Card{
