@@ -1,3 +1,10 @@
+# Rezinga
+
+Restaurant finding website which helps you to find all the restaurants in a particular city. Results can be filtered on the basis of cuisine and names. Frontend integrated with ZOMATO API. Frontend built using React and CSS. Axios used for integrating ZOMATO API with the frontend.
+
+Tech Stacks: ReactJS, HTML, CSS, JavaScript and Axios.
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
