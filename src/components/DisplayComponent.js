@@ -31,6 +31,8 @@ class Display extends Component{
 
       fetchMoreData = () => {
             var city_id,search_url;
+            if(Number.isNaN(parseInt(this.props.city)))
+            {
             axios({
                 method: "GET",
                 url:baseUrl+'cities?q='+this.props.city,
@@ -72,6 +74,36 @@ class Display extends Component{
               this.setState({err:true});
               return;
             });
+        }
+        else{
+            city_id=parseInt(this.props.city);
+            search_url=baseUrl+'search?city_id='+city_id+'&q='+this.props.search+'&start='+this.state.start+'&count='+this.state.count;
+              axios({
+                      method:"GET",
+                      url: search_url,
+                      headers:{
+                          "user-key": API_KEY,
+                          "content-type": "application/json"
+                      }
+              })
+              .then(res=>{
+                  if(res.data.restaurants.length){
+                      this.setState({checkMore: true});
+                  }
+                  else{
+                      this.setState({checkMore: false});
+                  }
+                  this.setState({
+                      list: [...this.state.list,...res.data.restaurants],
+                      isLoading: true,
+                      start: this.state.start+this.state.count-1
+                  });
+              })
+              .catch(error=>{
+                  this.setState({err: true});
+                  return;
+              });
+        }
     }
 
     componentDidUpdate(prevProps){
