@@ -64,10 +64,6 @@ class Home extends Component{
                         }
                     </div>
                 </div>
-                {
-                    !this.state.Disp&&
-                    <RenderCard />
-                }
             </>
         );
     }
